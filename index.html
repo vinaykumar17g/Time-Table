@@ -3,43 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Master Study Timetable - GATE, DSA, Development</title>
+    <title>GATE & MAANG Master Plan</title>
     <!-- Tailwind CSS for modern styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom styles for better readability and aesthetics */
         body {
-            font-family: "Inter", sans-serif; /* Using Inter font as per instructions */
-            background-color: #f8f9fa; /* Light background */
-            color: #343a40; /* Darker text for contrast */
+            font-family: "Inter", sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
             padding: 20px;
         }
         h1, h2, h3 {
-            color: #1a202c; /* Darker heading color */
+            color: #1a202c;
             margin-bottom: 1rem;
         }
         /* Styling for tables */
         table {
             width: 100%;
-            border-collapse: separate; /* Use separate for rounded corners on cells */
+            border-collapse: separate;
             border-spacing: 0;
             margin-bottom: 2rem;
             background-color: #ffffff;
-            border-radius: 0.75rem; /* Rounded corners for the whole table */
-            overflow: hidden; /* Ensures content respects border-radius */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
         th, td {
-            border: 1px solid #e2e8f0; /* Light border for cells */
+            border: 1px solid #e2e8f0;
             padding: 1rem;
             text-align: left;
             vertical-align: top;
         }
         th {
-            background-color: #edf2f7; /* Light grey for header */
-            font-weight: 600; /* Semi-bold */
-            color: #2d3748; /* Darker text for headers */
-            position: sticky; /* Sticky headers for long tables */
+            background-color: #edf2f7;
+            font-weight: 600;
+            color: #2d3748;
+            position: sticky;
             top: 0;
             z-index: 10;
         }
@@ -51,74 +51,61 @@
         tr:last-child td:last-child { border-bottom-right-radius: 0.75rem; }
 
         tr:nth-child(even) {
-            background-color: #f7fafc; /* Slightly darker background for even rows */
+            background-color: #f7fafc;
         }
         .category-table {
             width: auto;
             margin-bottom: 1.5rem;
-            box-shadow: none; /* No shadow for smaller tables */
+            box-shadow: none;
             border-radius: 0.5rem;
         }
         .category-table th, .category-table td {
             padding: 0.75rem 1rem;
         }
         .phase-header {
-            background-color: #d1e7dd; /* Light green for phase headers */
+            background-color: #d1e7dd;
             font-weight: bold;
             text-align: center;
             padding: 1.5rem;
-            font-size: 1.5em; /* Larger font size */
-            border-bottom: 2px solid #8ac8b7; /* Green border */
-            border-radius: 0.75rem; /* Rounded corners */
+            font-size: 1.5em;
+            border-bottom: 2px solid #8ac8b7;
+            border-radius: 0.75rem;
             margin-bottom: 1.5rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         .notes, .key-info {
-            background-color: #fffbeb; /* Light yellow for info boxes */
-            border-left: 5px solid #fbd38d; /* Yellow border */
+            background-color: #fffbeb;
+            border-left: 5px solid #fbd38d;
             padding: 1.5rem;
             margin-bottom: 1.5rem;
-            border-radius: 0.75rem; /* Rounded corners */
+            border-radius: 0.75rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         .key-info ul {
-            list-style-type: disc; /* Use discs for lists */
+            list-style-type: disc;
             padding-left: 20px;
         }
         .key-info li {
             margin-bottom: 0.5rem;
         }
         strong {
-            color: #0056b3; /* Highlight strong text */
+            color: #0056b3;
         }
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            table, .category-table {
-                display: block;
-                overflow-x: auto; /* Enable horizontal scrolling for tables on small screens */
-                white-space: nowrap; /* Prevent wrapping inside cells */
-            }
-            th, td {
-                min-width: 120px; /* Ensure minimum width for columns */
-            }
-            .phase-header {
-                font-size: 1.2em;
-                padding: 1rem;
-            }
-            .notes, .key-info {
-                padding: 1rem;
-            }
+            body { padding: 10px; }
+            table, .category-table { display: block; overflow-x: auto; white-space: nowrap; }
+            th, td { min-width: 120px; }
+            .phase-header { font-size: 1.2em; padding: 1rem; }
+            .notes, .key-info { padding: 1rem; }
         }
         /* Live schedule styles */
         .live-day-highlight {
-            background-color: #e6f7ff; /* Lighter blue for current day */
-            border: 2px solid #1890ff; /* Blue border */
+            background-color: #e6f7ff;
+            border: 2px solid #1890ff;
         }
         .current-task-highlight {
-            background-color: #d4eaf7 !important; /* A slightly different shade for the active task */
+            background-color: #d4eaf7 !important;
             font-weight: bold;
             border: 2px solid #1890ff !important;
         }
@@ -127,51 +114,36 @@
 <body class="p-4">
 
     <!-- Main Title -->
-    <h1 class="text-4xl font-bold text-center mb-8">Master Study Timetable - GATE, DSA, Development</h1>
+    <h1 class="text-4xl font-bold text-center mb-8">Comprehensive Dual-Focus Timetable</h1>
 
     <!-- Key Information Section -->
     <div class="key-info rounded-xl shadow-md">
-        <h3 class="text-2xl font-semibold mb-4">Current Date: Sunday, September 21, 2025</h3>
-        <p class="mb-2"><strong>Start Date for Timetable:</strong> September 21, 2025</p>
-        <p class="mb-3"><strong>Goals:</strong></p>
-        <table class="category-table rounded-lg overflow-hidden shadow-sm">
-            <thead>
-                <tr>
-                    <th class="bg-gray-100 text-gray-700 font-semibold px-4 py-2">Category</th>
-                    <th class="bg-gray-100 text-gray-700 font-semibold px-4 py-2">Goal</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td class="px-4 py-2">GATE 2026</td><td class="px-4 py-2">Achieve a high score for admission to M.Tech/PSU</td></tr>
-                <tr><td class="px-4 py-2">MAANG Internship 2027</td><td class="px-4 py-2">Secure a Summer Internship at a top tech company</td></tr>
-                <tr><td class="px-4 py-2">DSA</td><td class="px-4 py-2">Master Data Structures & Algorithms for competitive programming & interviews</td></tr>
-                <tr><td class="px-4 py-2">Development</td><td class="px-4 py-2">Build strong projects and practical skills in a chosen domain</td></tr>
-            </tbody>
-        </table>
-        <p class="mb-3"><strong>Key:</strong></p>
+        <h3 class="text-2xl font-semibold mb-4">Current Date: <span id="current-date"></span></h3>
+        <p class="mb-2"><strong>Start Date for Timetable:</strong> September 22, 2025</p>
+        <p class="mb-3">This plan is designed to help you balance rigorous GATE preparation with the DSA and development skills needed for a MAANG internship.</p>
+        <p class="mb-2"><strong>Key:</strong></p>
         <ul class="list-disc pl-5 mb-3">
+            <li><strong>PYQs:</strong> Previous Year Questions (for GATE)</li>
             <li><strong>DSA:</strong> Data Structures & Algorithms (for MAANG)</li>
             <li><strong>DEV:</strong> Development (Projects & Skills)</li>
-            <li><strong>GATE:</strong> GATE Exam Preparation (Concepts & PYQs)</li>
-            <li><strong>MOCK:</strong> Mock Test / Practice Contest</li>
+            <li><strong>Aptitude:</strong> General Aptitude & Engineering Mathematics</li>
         </ul>
         <p class="mb-2"><strong>Assumptions:</strong></p>
         <ul class="list-disc pl-5">
-            <li>Approx. 4-6 dedicated study hours outside of college hours per day.</li>
-            <li>Starting from zero in all areas.</li>
-            <li>One programming language chosen for DSA & Development.</li>
+            <li>Approx. 6-8 dedicated study hours per day.</li>
+            <li>You have access to standard textbooks, video lectures (e.g., NPTEL, paid courses), and a good test series.</li>
         </ul>
     </div>
     
     <!-- Phase 1 Section -->
-    <h2 class="phase-header rounded-xl shadow-md mt-8">PHASE 1: Foundation & Core Concepts (September 2025 - Jan 2026)</h2>
-    <h3 class="text-xl font-semibold text-center mb-4">~4-5 months - Focus: Language proficiency, DSA basics, Core CS Fundamentals, Initial GATE Subjects.</h3>
+    <h2 class="phase-header rounded-xl shadow-md mt-8">PHASE 1: Foundation Building & Overlap (Sep 2025 - Dec 2025)</h2>
+    <h3 class="text-xl font-semibold text-center mb-4">~4 months - Focus: Mastering core subjects for both GATE & DSA.</h3>
     <div class="notes rounded-xl shadow-md">
-        <p class="mb-2"><strong>Daily Time Allocation (Approx. 5-6 hours):</strong></p>
+        <p class="mb-2"><strong>Daily Time Allocation (Approx. 6-8 hours):</strong></p>
         <ul class="list-disc pl-5">
-            <li><strong>2.5 hours:</strong> GATE Subject Study (Concepts + PYQs)</li>
-            <li><strong>2 hours:</strong> DSA Practice (Learning + Problem Solving)</li>
-            <li><strong>1 hour:</strong> Core CS Fundamentals / Light Programming Practice</li>
+            <li><strong>3-4 hours:</strong> New Subject Study (Theory + Notes)</li>
+            <li><strong>2-3 hours:</strong> Problem Solving (PYQs + DSA Problems)</li>
+            <li><strong>1 hour:</strong> Development/Project Work + Aptitude</li>
         </ul>
     </div>
 
@@ -181,43 +153,40 @@
                 <tr>
                     <th>Week No.</th>
                     <th>Week Starting</th>
-                    <th>Main Focus Area</th>
-                    <th>GATE Subject Focus (Concepts & PYQs)</th>
-                    <th>DSA Focus (Concepts & LeetCode Level)</th>
-                    <th>Development/Other Focus</th>
+                    <th>Main Subject Focus</th>
+                    <th>Sub-Topics to Cover</th>
+                    <th>Practice Focus</th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td><strong>1</strong></td><td>Sep 21, 2025</td><td><strong>Language & DSA Intro</strong></td><td>Engg. Math (Linear Algebra)</td><td>Chosen Language (Syntax, Basics, OOP Intro), Big O, Arrays (Easy)</td><td>Git & GitHub Basics, IDE Setup</td></tr>
-                <tr><td><strong>2</strong></td><td>Sep 28, 2025</td><td><strong>Language & DSA Basics</strong></td><td>Engg. Math (Calculus)</td><td>Array Problems (Easy/Medium), Basic Sorting (Bubble, Selection)</td><td>Basic Problem Solving (HackerRank Easy)</td></tr>
-                <tr><td><strong>3</strong></td><td>Oct 5, 2025</td><td><strong>DSA Linked Lists</strong></td><td>Engg. Math (Probability & Statistics)</td><td>Linked Lists (Singly, Doubly, Circular - Implement), Stack (Easy/Medium)</td><td>Basic Shell Commands, Linux Basics</td></tr>
-                <tr><td><strong>4</strong></td><td>Oct 12, 2025</td><td><strong>DSA Stacks & Queues</strong></td><td>Engg. Math (Probability & Statistics)</td><td>Queues (Implement), Stack/Queue Problems (Medium)</td><td>Online Tutorials (HTML/CSS if Web, Kotlin/Java if Android)</td></tr>
-                <tr><td><strong>5</strong></td><td>Oct 19, 2025</td><td><strong>GATE OS Intro</strong></td><td>Operating Systems (Processes, Threads, CPU Scheduling)</td><td>Review Arrays/LL/Stack/Queue, Mixed Easy/Medium Problems</td><td>Start small coding project (e.g., CLI calculator)</td></tr>
-                <tr><td><strong>6</strong></td><td>Oct 26, 2025</td><td><strong>GATE OS Sync</strong></td><td>OS (Process Sync - Semaphores, Monitors, Deadlocks)</td><td>Recursion Basics, Backtracking Intro (Permutations, Combinations)</td><td>Project: Basic To-Do List (Web/Mobile)</td></tr>
-                <tr><td><strong>7</strong></td><td>Nov 2, 2025</td><td><strong>DSA Trees</strong></td><td>OS (Memory Management, Virtual Memory, Paging)</td><td>Binary Trees (Traversals: Inorder, Preorder, Postorder - Implement)</td><td>Project: Add Persistence to To-Do List</td></tr>
-                <tr><td><strong>8</strong></td><td>Nov 9, 2025</td><td><strong>GATE DBMS Intro</strong></td><td>DBMS (ER Model, Relational Model, Relational Algebra)</td><td>Binary Search Trees (BST - Insert, Delete, Search - Implement)</td><td>Refine Project UI/UX, Debugging Skills</td></tr>
-                <tr><td><strong>9</strong></td><td>Nov 16, 2025</td><td><strong>GATE DBMS SQL</strong></td><td>DBMS (SQL Queries - Joins, Subqueries, Aggregates)</td><td>Heaps (Min/Max Heap - Implement, Priority Queue)</td><td>Learn to use Debugger in your IDE</td></tr>
-                <tr><td><strong>10</strong></td><td>Nov 23, 2025</td><td><strong>DSA Hashing</strong></td><td>DBMS (Normalization - 1NF, 2NF, 3NF, BCNF)</td><td>Hashing (Collision Resolution, Hash Maps/Sets - Medium)</td><td>Project: Basic Authentication (if applicable)</td></tr>
-                <tr><td><strong>11</strong></td><td>Nov 30, 2025</td><td><strong>GATE CN Intro</strong></td><td>Computer Networks (OSI/TCP-IP Model, Physical & Data Link Layer)</td><td>Review Trees/Heaps/Hashing, Mixed Medium Problems</td><td>Explore basic libraries/frameworks in your chosen domain</td></tr>
-                <tr><td><strong>12</strong></td><td>Dec 7, 2025</td><td><strong>GATE CN Mid</strong></td><td>CN (Network Layer - IP Addressing, Routing Algorithms)</td><td>Graphs (DFS, BFS - Implement, Adjacency List/Matrix)</td><td>Read about Clean Code Principles</td></tr>
-                <tr><td><strong>13</strong></td><td>Dec 14, 2025</td><td><strong>DSA Graphs (Basic)</strong></td><td>CN (Transport Layer - TCP/UDP, Flow/Congestion Control)</td><td>Graph Traversal Problems (Medium), Cycle Detection</td><td>Start researching ideas for a "unique" project</td></tr>
-                <tr><td><strong>14</strong></td><td>Dec 21, 2025</td><td><strong>GATE DL Intro</strong></td><td>Digital Logic (Boolean Algebra, K-Maps, Logic Gates)</td><td>Shortest Path Algorithms (Dijkstra - basic understanding)</td><td>Learn about Unit Testing (basics)</td></tr>
-                <tr><td><strong>15</strong></td><td>Dec 28, 2025</td><td><strong>GATE DL Mid</strong></td><td>Digital Logic (Combinational Circuits - Adders, Mux, Decoders)</td><td>Greedy Algorithms (Intro, simple problems)</td><td>Watch tech talks on your development area</td></tr>
-                <tr><td><strong>16</strong></td><td>Jan 4, 2026</td><td><strong>GATE DL Sequential</strong></td><td>Digital Logic (Sequential Circuits - Flip-flops, Counters, Registers)</td><td>Dynamic Programming (Intro, Overlapping Subproblems, Optimal Substructure)</td><td>Focus on making Project 1 presentable (README, demo)</td></tr>
-                <tr><td><strong>17</strong></td><td>Jan 11, 2026</td><td><strong>GATE ALGO Intro</strong></td><td>Algorithms (Asymptotic Notation, Divide & Conquer)</td><td>DP Basics (Fibonacci, Knapsack 0/1 - conceptual)</td><td>Review Resume Structure, Keywords</td></tr>
-                <tr><td><strong>18</strong></td><td>Jan 18, 2026</td><td><strong>GATE ALGO Recurrence</strong></td><td>Algorithms (Recurrence Relations, Master Theorem)</td><td>DP (Memoization vs. Tabulation - implement)</td><td>Plan for GATE intensive phase, MAANG prep schedule</td></tr>
+                <tr><td><strong>1</strong></td><td>Sep 22, 2025</td><td><strong>Discrete Mathematics</strong></td><td>Set Theory, Logic, Combinatorics, Graph Theory Basics</td><td>PYQs (1-2 per day), DSA: Arrays (Easy), DEV: Intro to Kotlin/Java</td></tr>
+                <tr><td><strong>2</strong></td><td>Sep 29, 2025</td><td><strong>Discrete Mathematics</strong></td><td>Recurrence Relations, Functions, Relations</td><td>PYQs, DSA: Linked Lists (Easy/Medium), DEV: Android Studio basics</td></tr>
+                <tr><td><strong>3</strong></td><td>Oct 6, 2025</td><td><strong>Data Structures</strong></td><td>Arrays, Stacks, Queues, Linked Lists (implementation and complexity)</td><td>PYQs and DSA: Stacks & Queues (Medium), DEV: Basic UI with XML</td></tr>
+                <tr><td><strong>4</strong></td><td>Oct 13, 2025</td><td><strong>Data Structures</strong></td><td>Trees (BST, AVL), Heaps, Hashing (collision resolution)</td><td>PYQs and DSA: Trees (Easy/Medium), DEV: Build first simple app</td></tr>
+                <tr><td><strong>5</strong></td><td>Oct 20, 2025</td><td><strong>Algorithms</strong></td><td>Big-O notation, Searching & Sorting Algorithms, Greedy Algorithms</td><td>PYQs, focus on time/space complexity, DSA: Backtracking (Intro), DEV: Learn about Activities & Intents</td></tr>
+                <tr><td><strong>6</strong></td><td>Oct 27, 2025</td><td><strong>Algorithms</strong></td><td>Graph Algorithms (BFS, DFS, Dijkstra, Kruskal, Prim)</td><td>PYQs and DSA: Graph Problems (Medium), DEV: Add navigation to your app</td></tr>
+                <tr><td><strong>7</strong></td><td>Nov 3, 2025</td><td><strong>Operating Systems</strong></td><td>Processes, Threads, CPU Scheduling, Synchronization</td><td>PYQs and conceptual questions, DSA: Dynamic Programming (Intro), DEV: Use Fragments for modular UI</td></tr>
+                <tr><td><strong>8</strong></td><td>Nov 10, 2025</td><td><strong>Operating Systems</strong></td><td>Deadlocks, Memory Management, Virtual Memory, File Systems</td><td>PYQs and conceptual questions, DSA: DP (Medium), DEV: Implement basic data storage (SharedPreferences)</td></tr>
+                <tr><td><strong>9</strong></td><td>Nov 17, 2025</td><td><strong>Computer Networks</strong></td><td>OSI/TCP-IP Model, Physical & Data Link Layer protocols</td><td>PYQs and conceptual questions, DEV: Start Project 1 - a Simple To-Do App</td></tr>
+                <tr><td><strong>10</strong></td><td>Nov 24, 2025</td><td><strong>Computer Networks</strong></td><td>Network Layer (IP, Routing), Transport Layer (TCP, UDP)</td><td>PYQs and conceptual questions, DEV: Build Project 1 features (add/delete tasks)</td></tr>
+                <tr><td><strong>11</strong></td><td>Dec 1, 2025</td><td><strong>Database Management System</strong></td><td>ER Model, Relational Algebra & Calculus, SQL Queries</td><td>PYQs and SQL practice, DEV: Finish Project 1 (add data persistence)</td></tr>
+                <tr><td><strong>12</strong></td><td>Dec 8, 2025</td><td><strong>Database Management System</strong></td><td>Normalization, Transactions, Concurrency Control, Indexing (B/B+ trees)</td><td>PYQs and theory-based questions, DEV: Work on Git & GitHub profile</td></tr>
+                <tr><td><strong>13</strong></td><td>Dec 15, 2025</td><td><strong>Theory of Computation</strong></td><td>Regular Languages, Finite Automata, Context-Free Grammars</td><td>PYQs and theoretical problem solving, DEV: Research ideas for Project 2</td></tr>
+                <tr><td><strong>14</strong></td><td>Dec 22, 2025</td><td><strong>Theory of Computation</strong></td><td>Pushdown Automata, Turing Machines, Undecidability</td><td>PYQs and theoretical problem solving, DEV: Start learning about APIs (Retrofit)</td></tr>
+                <tr><td><strong>15</strong></td><td>Dec 29, 2025</td><td><strong>Compiler Design</strong></td><td>Lexical Analysis, Parsing, Syntax-Directed Translation</td><td>PYQs and conceptual questions, DEV: Learn about advanced layouts (ConstraintLayout)</td></tr>
             </tbody>
         </table>
     </div>
 
     <!-- Phase 2 Section -->
-    <h2 class="phase-header rounded-xl shadow-md mt-8">PHASE 2: GATE 2026 Intensive & DSA Deep Dive (January 2026 - February 2026)</h2>
-    <h3 class="text-xl font-semibold text-center mb-4">~2 months - Focus: Complete remaining GATE syllabus, intensify DSA for MAANG.</h3>
+    <h2 class="phase-header rounded-xl shadow-md mt-8">PHASE 2: GATE Exam Focus (Jan 2026 - Feb 2026)</h2>
+    <h3 class="text-xl font-semibold text-center mb-4">~6 weeks - Focus: Intense GATE revision and mock tests.</h3>
     <div class="notes rounded-xl shadow-md">
-        <p class="mb-2"><strong>Daily Time Allocation (Approx. 6-7 hours):</strong></p>
+        <p class="mb-2"><strong>Daily Time Allocation (Approx. 8-10 hours):</strong></p>
         <ul class="list-disc pl-5">
-            <li><strong>3.5-4 hours:</strong> GATE Subject Study/Revision + PYQs + Mock Tests</li>
-            <li><strong>2.5-3 hours:</strong> DSA (Advanced + Problem Solving)</li>
+            <li><strong>4 hours:</strong> Mock Test (Full-Length)</li>
+            <li><strong>3 hours:</strong> Analysis of Mock Test & Revision of Weak Topics</li>
+            <li><strong>1-2 hours:</strong> Short Notes Revision + Aptitude Practice</li>
         </ul>
     </div>
 
@@ -228,34 +197,29 @@
                     <th>Week No.</th>
                     <th>Week Starting</th>
                     <th>Main Focus Area</th>
-                    <th>GATE Subject Focus (Concepts & PYQs)</th>
-                    <th>DSA Focus (Concepts & LeetCode Level)</th>
-                    <th>Development/Other Focus</th>
+                    <th>Sub-Topics to Cover</th>
+                    <th>Activities</th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td><strong>19</strong></td><td>Jan 25, 2026</td><td><strong>GATE TOC Intro</strong></td><td>Theory of Computation (Finite Automata, Regular Expressions)</td><td>DP (LCS, Edit Distance - Medium)</td><td>Minimal Dev. Focus on Academics.</td></tr>
-                <tr><td><strong>20</strong></td><td>Feb 1, 2026</td><td><strong>GATE TOC Mid</strong></td><td>TOC (Context-Free Grammars, Pushdown Automata)</td><td>Graph Algorithms (Bellman-Ford, Floyd-Warshall - conceptual)</td><td>Quick review of CS Fundamentals</td></tr>
-                <tr><td><strong>21</strong></td><td>Feb 8, 2026</td><td><strong>GATE CD Intro</strong></td><td>Compiler Design (Lexical Analysis, Parsing - Top-Down)</td><td>Graph Algorithms (MST - Prim, Kruskal - conceptual)</td><td>MAANG: Research Companies & Roles</td></tr>
-                <tr><td><strong>22</strong></td><td>Feb 15, 2026</td><td><strong>GATE CD Mid</strong></td><td>Compiler Design (Parsing - Bottom-Up, Syntax Directed Translation)</td><td>Disjoint Set Union (DSU)</td><td>MAANG: Understand Interview Process</td></tr>
-                <tr><td><strong>23</strong></td><td>Feb 22, 2026</td><td><strong>GATE COA Intro</strong></td><td>Computer Organization & Architecture (CPU Organization, Pipelining)</td><td>Mixed DSA Problems (Medium/Hard) - Focus on Speed</td><td>MAANG: Prepare Behavioral Questions (STAR method)</td></tr>
-                <tr><td><strong>24</strong></td><td>Mar 1, 2026</td><td><strong>GATE COA Mem</strong></td><td>COA (Memory Hierarchy, Cache Mapping, Virtual Memory)</td><td>**FULL-LENGTH DSA MOCK (2-3 hrs)**</td><td>GATE: Take 1st Full-Length Mock Test</td></tr>
-                <tr><td><strong>25</strong></td><td>Mar 8, 2026</td><td><strong>GATE SE/Aptitude</strong></td><td>Software Engg. (SDLC, Testing, SCM), General Aptitude & Maths</td><td>LeetCode Hard Problems (daily 2-3)</td><td>GATE: Analyze Mock Test, Identify Weak Areas</td></tr>
-                <tr><td><strong>26</strong></td><td>Mar 15, 2026</td><td><strong>GATE Full Syllabus Revision</strong></td><td>All Subjects (Rapid Revision of Notes & Formulas)</td><td>LeetCode Hard Problems, Problem-Solving Strategies</td><td>GATE: Take 2nd Full-Length Mock Test</td></tr>
-                <tr><td><strong>27</strong></td><td>Mar 22, 2026</td><td><strong>GATE Final Revision</strong></td><td>All Subjects (Short Notes, PYQs of last 5 years)</td><td>Consistent Hard Problem Solving</td><td>GATE: Analyze Mock Test, Identify Weak Areas</td></tr>
+                <tr><td><strong>16</strong></td><td>Jan 5, 2026</td><td><strong>Full Syllabus Revision</strong></td><td>Quick revision of all core subjects from Phase 1</td><td>Take 2-3 mock tests per week, analyze mistakes</td></tr>
+                <tr><td><strong>17</strong></td><td>Jan 12, 2026</td><td><strong>Mock Test Marathon</strong></td><td>Focus on tricky topics like DP, Graph Algorithms, OS Synchronization</td><td>Take 3-4 mock tests per week, time-bound practice</td></tr>
+                <tr><td><strong>18</strong></td><td>Jan 19, 2026</td><td><strong>Weak Area Targeting</strong></td><td>Identify and revisit topics where you consistently make errors</td><td>Solve PYQs from the last 10 years, focusing on your weak areas</td></tr>
+                <tr><td><strong>19</strong></td><td>Jan 26, 2026</td><td><strong>Final Revision & Confidence Building</strong></td><td>Go through all your short notes and formulas</td><td>Take 1-2 final mock tests, practice with the GATE virtual calculator</td></tr>
+                <tr><td><strong>20</strong></td><td>Feb 2, 2026</td><td><strong>Pre-Exam Prep</strong></td><td>Only light revision. Do not start new topics. Focus on staying calm.</td><td>Relax, eat well, get good sleep.</td></tr>
             </tbody>
         </table>
     </div>
-
+    
     <!-- Phase 3 Section -->
-    <h2 class="phase-header rounded-xl shadow-md mt-8">PHASE 3: GATE 2026 Exam & MAANG Interview Ramp-Up (Mar 2026 - Oct 2026)</h2>
-    <h3 class="text-xl font-semibold text-center mb-4">~7 months - Focus: Ace GATE, Build Strong Projects, Network, Apply & Interview for MAANG.</h3>
+    <h2 class="phase-header rounded-xl shadow-md mt-8">PHASE 3: MAANG Interview Focus (Mar 2026 - Oct 2026)</h2>
+    <h3 class="text-xl font-semibold text-center mb-4">~7 months - Focus: Project building, advanced DSA, and interview prep.</h3>
     <div class="notes rounded-xl shadow-md">
-        <p class="mb-2"><strong>Daily Time Allocation (Approx. 5-6 hours):</strong></p>
+        <p class="mb-2"><strong>Daily Time Allocation (Approx. 6-8 hours):</strong></p>
         <ul class="list-disc pl-5">
-            <li><strong>2.5-3 hours:</strong> DSA Practice (consistent)</li>
-            <li><strong>2-2.5 hours:</strong> Development (Project 2/3 refinement, new features)</li>
-            <li><strong>0.5 hour:</strong> Networking/Resume/Behavioral Prep</li>
+            <li><strong>3-4 hours:</strong> Development (Projects & Skills)</li>
+            <li><strong>2-3 hours:</strong> DSA Practice (Advanced Problems)</li>
+            <li><strong>1 hour:</strong> System Design/Behavioral Prep/Networking</li>
         </ul>
     </div>
 
@@ -266,70 +230,48 @@
                     <th>Week No.</th>
                     <th>Week Starting</th>
                     <th>Main Focus Area</th>
-                    <th>GATE Focus (Concepts & PYQs)</th>
-                    <th>DSA Focus (Concepts & LeetCode Level)</th>
-                    <th>Development/Other Focus</th>
+                    <th>DSA Focus (LeetCode Level)</th>
+                    <th>Development/Interview Focus</th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td><strong>28</strong></td><td>Mar 29, 2026</td><td><strong>GATE EXAM WEEK!</strong></td><td><strong>GATE Exam Day!</strong> (Relax & perform your best)</td><td>Post-GATE: Short Break, then resume DSA (Medium/Hard)</td><td>Short Break / Light Project Cleanup</td></tr>
-                <tr><td><strong>29</strong></td><td>Apr 5, 2026</td><td><strong>MAANG DSA Focus</strong></td><td>(Post-GATE analysis if results out)</td><td><strong>Intensive DSA (Daily LeetCode Medium/Hard)</strong>, Pramp/Peer Mock Interviews</td><td>Start Project 2 (Unique Idea), focus on architecture</td></tr>
-                <tr><td><strong>30</strong></td><td>Apr 12, 2026</td><td><strong>MAANG Behavioral Prep</strong></td><td>-</td><td>Continue Intensive DSA, Focus on explaining solutions clearly</td><td>Project 2 Development, Git Best Practices</td></tr>
-                <tr><td><strong>31</strong></td><td>Apr 19, 2026</td><td><strong>Project 2 Build</strong></td><td>-</td><td>DSA: Mix of Easy/Medium/Hard. Revisit weak areas.</td><td>Project 2 Progress: Core features, good UI/UX</td></tr>
-                <tr><td><strong>32</strong></td><td>Apr 26, 2026</td><td><strong>System Design Intro</strong></td><td>-</td><td>Mock Interviews (focus on communication & complexity)</td><td>Basic System Design Concepts (Scalability, Load Balancing, DBs)</td></tr>
-                <tr><td><strong>33</strong></td><td>May 3, 2026</td><td><strong>Project 2 Mid</strong></td><td>-</td><td>DSA Contest Practice (Codeforces/CodeChef)</td><td>Project 2: Add advanced features, API integrations</td></tr>
-                <tr><td><strong>34</strong></td><td>May 10, 2026</td><td><strong>Networking</strong></td><td>-</td><td>Consistent DSA, LeetCode "Top Interview Questions"</td><td>LinkedIn Profile Optimization, Connect with Engineers/Recruiters</td></tr>
-                <tr><td><strong>35</strong></td><td>May 17, 2026</td><td><strong>Project 2 Finish</strong></td><td>-</td><td>Mock Interviews (3-4 per week), focus on speed & accuracy</td><td><strong>Project 2 Completion:</strong> Deployment, Detailed README, Demo Video</td></tr>
-                <tr><td><strong>36</strong></td><td>May 24, 2026</td><td><strong>Project 3 / Refinement</strong></td><td>-</td><td>DSA: Review all topics, focus on optimal solutions</td><td>Start Project 3 (if unique idea) OR enhance Project 1/2 significantly</td></tr>
-                <tr><td><strong>37</strong></td><td>May 31, 2026</td><td><strong>Resume Finalization</strong></td><td>-</td><td>LeetCode Grind 75 / Blind 75</td><td>Finalize Resume (get reviews), Cover Letter Prep</td></tr>
-                <tr><td><strong>38</strong></td><td>Jun 7, 2026</td><td><strong>MAANG Application Prep</strong></td><td>-</td><td>Intensive LeetCode, company-specific questions</td><td>Research MAANG openings, tailor resume for each</td></tr>
-                <tr><td><strong>39</strong></td><td>Jun 14, 2026</td><td><strong>MAANG OA Practice</strong></td><td>-</td><td>Practice Online Assessments (coding problems, time limits)</td><td>Behavioral Prep (STAR method - varied scenarios)</td></tr>
-                <tr><td><strong>40</strong></td><td>Jun 21, 2026</td><td><strong>MAANG Application Start</strong></td><td>-</td><td>**MAANG Internships Open! Apply Early!**</td><td>Behavioral Prep, Company Research</td></tr>
-                <tr><td><strong>41</strong></td><td>Jun 28, 2026</td><td><strong>MAANG Interview Prep</strong></td><td>-</td><td>Daily DSA, Mock Interviews, Problem-Solving Discussions</td><td>Stay updated on company news/tech blogs</td></tr>
-                <tr><td><strong>42</strong></td><td>Jul 5, 2026</td><td>**MAANG Interviews**</td><td>-</td><td>**Primary Focus: Ace Interviews!** Constant DSA, Behavioral Prep</td><td>Follow-ups, Thank You Notes, Project Demos</td></tr>
-                <tr><td><strong>43</strong></td><td>Jul 12, 2026</td><td>**MAANG Interviews**</td><td>-</td><td>**Primary Focus: Ace Interviews!** Constant DSA, Behavioral Prep</td><td>Follow-ups, Thank You Notes, Project Demos</td></tr>
-                <tr><td><strong>44</strong></td><td>Jul 19, 2026</td><td>**MAANG Interviews**</td><td>-</td><td>**Primary Focus: Ace Interviews!** Constant DSA, Behavioral Prep</td><td>Follow-ups, Thank You Notes, Project Demos</td></tr>
-                <tr><td><strong>45</strong></td><td>Jul 26, 2026</td><td>**MAANG Interviews**</td><td>-</td><td>**Primary Focus: Ace Interviews!** Constant DSA, Behavioral Prep</td><td>Follow-ups, Thank You Notes, Project Demos</td></tr>
-                <tr><td><strong>46</strong></td><td>Aug 2, 2026</td><td>**MAANG Interviews**</td><td>-</td><td>**Primary Focus: Ace Interviews!** Constant DSA, Behavioral Prep</td><td>Follow-ups, Thank You Notes, Project Demos</td></tr>
-                <tr><td><strong>47</strong></td><td>Aug 9, 2026</td><td>**MAANG Interviews**</td><td>-</td><td>**Primary Focus: Ace Interviews!** Constant DSA, Behavioral Prep</td><td>Follow-ups, Thank You Notes, Project Demos</td></tr>
-                <tr><td><strong>48</strong></td><td>Aug 16, 2026</td><td>**MAANG Interviews**</td><td>-</td><td>**Primary Focus: Ace Interviews!** Constant DSA, Behavioral Prep</td><td>Follow-ups, Thank You Notes, Project Demos</td></tr>
-                <tr><td><strong>49</strong></td><td>Aug 23, 2026</td><td>**MAANG Interviews**</td><td>-</td><td>**Primary Focus: Ace Interviews!** Constant DSA, Behavioral Prep</td><td>Follow-ups, Thank You Notes, Project Demos</td></tr>
-                <tr><td><strong>50</strong></td><td>Aug 30, 2026</td><td>**MAANG Interviews**</td><td>-</td><td>**Primary Focus: Ace Interviews!** Constant DSA, Behavioral Prep</td><td>Follow-ups, Thank You Notes, Project Demos</td></tr>
-                <tr><td><strong>51</strong></td><td>Sep 6, 2026</td><td>**MAANG Interviews**</td><td>-</td><td>**Primary Focus: Ace Interviews!** Constant DSA, Behavioral Prep</td><td>Follow-ups, Thank You Notes, Project Demos</td></tr>
-                <tr><td><strong>52</strong></td><td>Sep 13, 2026</td><td>**MAANG Interviews**</td><td>-</td><td>**Primary Focus: Ace Interviews!** Constant DSA, Behavioral Prep</td><td>Follow-ups, Thank You Notes, Project Demos</td></tr>
-                <tr><td>**53**</td><td>Sep 20, 2026</td><td>**MAANG Interviews**</td><td>-</td><td>**Primary Focus: Ace Interviews!** Constant DSA, Behavioral Prep</td><td>Follow-ups, Thank You Notes, Project Demos</td></tr>
-                <tr><td>**...**</td><td>**...**</td><td>**Offer Secured!**</td><td>-</td><td>Maintain skills</td><td>Celebrate! Prepare for internship.</td></tr>
-                <tr><td>**...**</td><td>**...**</td><td>**If no offer yet**</td><td>-</td><td>Analyze rejections, improve weak areas, apply more!</td><td>Build more projects, explore new tech.</td></tr>
+                <tr><td><strong>21</strong></td><td>Mar 2, 2026</td><td><strong>Post-GATE Break & DSA Ramp-up</strong></td><td>Intensive DSA (Medium/Hard) with focus on problem-solving patterns.</td><td>Short Break, then start Project 2 (Unique Idea - Android)</td></tr>
+                <tr><td><strong>22</strong></td><td>Mar 9, 2026</td><td><strong>DSA & Project 2 Build</strong></td><td>Continue Intensive DSA (Medium/Hard), Pramp/Peer Mock Interviews</td><td>Project 2 Development: Use advanced Android components (e.g., RecyclerView, Fragments)</td></tr>
+                <tr><td><strong>23</strong></td><td>Mar 16, 2026</td><td><strong>System Design Intro</strong></td><td>DSA: Mix of Easy/Medium/Hard. Revisit weak areas.</td><td>Basic System Design Concepts (for Android app), MVVM architecture</td></tr>
+                <tr><td><strong>24</strong></td><td>Mar 23, 2026</td><td><strong>Project 2 Mid</strong></td><td>Mock Interviews (focus on communication & complexity)</td><td>Project 2: Add API integrations, data persistence with Room DB</td></tr>
+                <tr><td><strong>25</strong></td><td>Mar 30, 2026</td><td><strong>Project 2 Finish</strong></td><td>DSA Contest Practice (Codeforces/CodeChef)</td><td><strong>Project 2 Completion:</strong> Deployment, Detailed README, Demo Video</td></tr>
+                <tr><td><strong>26</strong></td><td>Apr 6, 2026</td><td><strong>Project 3 / Refinement</strong></td><td>DSA: Review all topics, focus on optimal solutions</td><td>Start Project 3 (if unique idea) OR enhance Project 1/2 significantly</td></tr>
+                <tr><td><strong>27</strong></td><td>Apr 13, 2026</td><td><strong>Resume Finalization & Networking</strong></td><td>LeetCode Grind 75 / Blind 75</td><td>Finalize Resume (get reviews), LinkedIn Profile, Connect with recruiters</td></tr>
+                <tr><td><strong>28</strong></td><td>Apr 20, 2026</td><td><strong>MAANG Application Prep</strong></td><td>Intensive LeetCode, company-specific questions</td><td>Research MAANG openings, tailor resume for each</td></tr>
+                <tr><td><strong>29</strong></td><td>Apr 27, 2026</td><td><strong>MAANG OA Practice</strong></td><td>Practice Online Assessments (coding problems, time limits)</td><td>Behavioral Prep (STAR method - varied scenarios)</td></tr>
+                <tr><td><strong>30</strong></td><td>May 4, 2026</td><td><strong>MAANG Application Start</strong></td><td>**MAANG Internships Open! Apply Early!**</td><td>Behavioral Prep, Company Research</td></tr>
+                <tr><td><strong>31-34</strong></td><td>May 11-Jun 1, 2026</td><td><strong>MAANG Interviews</strong></td><td>**Primary Focus: Ace Interviews!** Constant DSA, Behavioral Prep</td><td>Follow-ups, Thank You Notes, Project Demos</td></tr>
+                <tr><td><strong>35-50</strong></td><td>Jun 8-Sep 21, 2026</td><td>**More Interviews & PPO Prep**</td><td>Maintain skills, explore advanced topics</td><td>If offer secured, prepare for internship. If not, continue applying.</td></tr>
             </tbody>
         </table>
     </div>
 
-    <!-- Phase 4 Section -->
-    <h2 class="phase-header rounded-xl shadow-md mt-8">PHASE 4: Post-Internship/Full-Time Prep (October 2026 - February 2027)</h2>
-    <h3 class="text-xl font-semibold text-center mb-4">Focus: Leverage internship experience for full-time offers or continue preparation.</h3>
+    <!-- Suggested Projects Section -->
+    <h2 class="phase-header rounded-xl shadow-md mt-8">Suggested Projects for Development</h2>
+    <h3 class="text-xl font-semibold text-center mb-4">Build these projects to enhance your skills and resume.</h3>
     <div class="notes rounded-xl shadow-md">
-        <p class="mb-2">This phase is highly dependent on whether you secure an internship. If yes, focus on performing well during the internship. If not, continue rigorous DSA and project development for the next application cycle (for full-time roles).</p>
+        <p class="mb-2">Focus on understanding the underlying concepts, clean code, and version control (Git).</p>
+        <ul class="list-disc pl-5">
+            <li><strong>Beginner Android Projects (Phase 1):</strong></li>
+            <ul class="list-circle pl-5 ml-4">
+                <li><strong>To-Do List App:</strong> Basic CRUD functionality. Learn about `Activities`, `Intents`, and `SharedPreferences`.</li>
+                <li><strong>Unit Converter:</strong> Simple UI with input fields and conversion logic. Focus on responsive design.</li>
+                <li><strong>Weather App:</strong> Use a simple API to display weather data. This introduces network requests.</li>
+            </ul>
+            <li><strong>Intermediate Android Projects (Phase 3):</strong></li>
+            <ul class="list-circle pl-5 ml-4">
+                <li><strong>Notes App with Room DB:</strong> A more robust to-do or notes app that uses a local database (`Room`) and modern architecture (`MVVM`).</li>
+                <li><strong>News Aggregator App:</strong> Fetches news articles from an API, displays them in a `RecyclerView`, and includes features like filtering or search.</li>
+                <li><strong>Simple Chat App:</strong> Implements real-time messaging using Firebase.</li>
+            </ul>
+        </ul>
     </div>
-
-    <div class="overflow-x-auto rounded-xl shadow-lg">
-        <table>
-            <thead>
-                <tr>
-                    <th>Month</th>
-                    <th>Focus</th>
-                    <th>Activities</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Oct 2026</td><td>Internship/Full-time Prep</td><td>If internship secured: Onboarding, initial project work. If not: Intensify DSA, apply for more roles, build more projects.</td></tr>
-                <tr><td>Nov 2026</td><td>Skill Consolidation</td><td>Internship work or continued DSA/Development. Prepare for potential PPO interviews.</td></tr>
-                <tr><td>Dec 2026</td><td>Winter Break/Internship</td><td>If internship, continue working. If not, utilize break for project building/DSA.</td></tr>
-                <tr><td>Jan 2027</td><td>Placement Season Prep</td><td>Prepare for final year placements, whether from PPO or fresh applications.</td></tr>
-                <tr><td>Feb 2027</td><td>Placements/Final Year</td><td>Final placement drives.</td></tr>
-            </tbody>
-        </table>
-    </div>
-
+    
     <!-- Daily Micro-Timetable Section -->
     <h2 class="phase-header rounded-xl shadow-md mt-8">Daily Micro-Timetable (Example)</h2>
     <h3 class="text-xl font-semibold text-center mb-4">Adjust daily focus based on current phase and personal energy levels.</h3>
@@ -348,60 +290,28 @@
                 </tr>
             </thead>
             <tbody>
-                <tr data-start-time="01:00" data-end-time="01:10"><td style="background-color: #BDBDBD;">07:00 AM - 07:30 AM</td><td style="background-color: #BDBDBD;">Wake Up, Fresh Up, Light Exercise/Stretching</td><td style="background-color: #BDBDBD;">Personal Care</td><td style="background-color: #BDBDBD;">Start the day fresh and alert.</td></tr>
-                <tr data-start-time="07:30" data-end-time="08:00"><td style="background-color: #BDBDBD;">07:30 AM - 08:00 AM</td><td style="background-color: #BDBDBD;">Breakfast & Quick Review</td><td style="background-color: #BDBDBD;">Planning/Review</td><td style="background-color: #BDBDBD;">Fuel up and mentally prepare for the day.</td></tr>
-                <tr data-start-time="08:00" data-end-time="10:00"><td style="background-color: #2196F3;">08:00 AM - 10:00 AM</td><td style="background-color: #2196F3;">GATE Subject 1 (Theory & Concepts)</td><td style="background-color: #2196F3;">GATE Core</td><td style="background-color: #2196F3;">Deep dive into new topic, make notes.</td></tr>
-                <tr data-start-time="10:00" data-end-time="10:15"><td style="background-color: #BDBDBD;">10:00 AM - 10:15 AM</td><td style="background-color: #BDBDBD;">Short Break</td><td style="background-color: #BDBDBD;">Rest</td><td style="background-color: #BDBDBD;">Hydrate, walk around, stretch.</td></tr>
-                <tr data-start-time="10:15" data-end-time="12:15"><td style="background-color: #2196F3;">10:15 AM - 12:15 PM</td><td style="background-color: #2196F3;">GATE Subject 2 (Problem Solving / Aptitude)</td><td style="background-color: #2196F3;">GATE Core / Aptitude</td><td style="background-color: #2196F3;">Apply concepts, solve PYQs, practice Aptitude.</td></tr>
-                <tr data-start-time="12:15" data-end-time="13:15"><td style="background-color: #BDBDBD;">12:15 PM - 01:15 PM</td><td style="background-color: #BDBDBD;">Lunch Break</td><td style="background-color: #BDBDBD;">Relaxation</td><td style="background-color: #BDBDBD;">Step away from screens, eat mindfully.</td></tr>
-                <tr data-start-time="13:15" data-end-time="14:45"><td style="background-color: #4CAF50;">01:15 PM - 02:45 PM</td><td style="background-color: #4CAF50;">Data Structures & Algorithms (DSA)</td><td style="background-color: #4CAF50;">DSA Practice</td><td style="background-color: #4CAF50;">LeetCode/HackerRank problems (2-4), implement DS from scratch.</td></tr>
-                <tr data-start-time="14:45" data-end-time="15:00"><td style="background-color: #BDBDBD;">02:45 PM - 03:00 PM</td><td style="background-color: #BDBDBD;">Short Break</td><td style="background-color: #BDBDBD;">Rest</td><td style="background-color: #BDBDBD;">Quick mental reset.</td></tr>
-                <tr data-start-time="15:00" data-end-time="16:30"><td style="background-color: #FF9800;">03:00 PM - 04:30 PM</td><td style="background-color: #FF9800;">Android Development</td><td style="background-color: #FF9800;">Android Project/Learning</td><td style="background-color: #FF9800;">Learn new concepts, build features, follow tutorials.</td></tr>
-                <tr data-start-time="16:30" data-end-time="17:30"><td style="background-color: #9C27B0;">04:30 PM - 05:30 PM</td><td style="background-color: #9C27B0;">6th Semester Academics / College Work</td><td style="background-color: #9C27B0;">College Academics</td><td style="background-color: #9C27B0;">Attend lectures, review notes, basic assignments.</td></tr>
-                <tr data-start-time="17:30" data-end-time="18:30"><td style="background-color: #BDBDBD;">05:30 PM - 06:30 PM</td><td style="background-color: #BDBDBD;">Personal Time / Exercise / Hobbies</td><td style="background-color: #BDBDBD;">Wellness</td><td style="background-color: #BDBDBD;">Essential for de-stressing and preventing burnout.</td></tr>
-                <tr data-start-time="18:30" data-end-time="19:30"><td style="background-color: #BDBDBD;">06:30 PM - 07:30 PM</td><td style="background-color: #BDBDBD;">Dinner & Family Time</td><td style="background-color: #BDBDBD;">Relaxation</td><td style="background-color: #BDBDBD;">Recharge and connect.</td></tr>
-                <tr data-start-time="19:30" data-end-time="21:00"><td style="background-color: #00BCD4;">07:30 PM - 09:00 PM</td><td style="background-color: #00BCD4;">Flexible Slot (Choose based on need)</td><td style="background-color: #00BCD4;">GATE/DSA/Android/Revision</td><td style="background-color: #00BCD4;">More GATE PYQs, competitive programming, Android deep dive, revision.</td></tr>
-                <tr data-start-time="21:00" data-end-time="21:30"><td style="background-color: #BDBDBD;">09:00 PM - 09:30 PM</td><td style="background-color: #BDBDBD;">Plan for Tomorrow / Light Reading</td><td style="background-color: #BDBDBD;">Planning/Wind Down</td><td style="background-color: #BDBDBD;">Organize thoughts, prepare for the next day.</td></tr>
-                <tr data-start-time="21:30" data-end-time="22:00"><td style="background-color: #BDBDBD;">09:30 PM - 10:00 PM</td><td style="background-color: #BDBDBD;">Prepare for Sleep</td><td style="background-color: #BDBDBD;">Personal Care</td><td style="background-color: #BDBDBD;">Get ready for bed, minimize screen time.</td></tr>
-                <tr data-start-time="22:00" data-end-time="24:00"><td style="background-color: #BDBDBD;">10:00 PM onwards</td><td style="background-color: #BDBDBD;">Sleep</td><td style="background-color: #BDBDBD;">Rest & Recovery</td><td style="background-color: #BDBDBD;">Crucial for memory consolidation and sustained energy (7-8 hours).</td></tr>
+                <tr data-start-time="07:00" data-end-time="08:00"><td style="background-color: #BDBDBD;">07:00 AM - 08:00 AM</td><td style="background-color: #BDBDBD;">Wake Up, Freshen Up, Light Exercise/Stretching</td><td style="background-color: #BDBDBD;">Personal Care</td><td style="background-color: #BDBDBD;">Start the day fresh and alert.</td></tr>
+                <tr data-start-time="08:00" data-end-time="09:00"><td style="background-color: #BDBDBD;">08:00 AM - 09:00 AM</td><td style="background-color: #BDBDBD;">Breakfast & Quick Revision</td><td style="background-color: #BDBDBD;">Planning/Review</td><td style="background-color: #BDBDBD;">Review short notes from the previous day's topic.</td></tr>
+                <tr data-start-time="09:00" data-end-time="12:00"><td style="background-color: #2196F3;">09:00 AM - 12:00 PM</td><td style="background-color: #2196F3;">New Subject Study</td><td style="background-color: #2196F3;">GATE Core Theory</td><td style="background-color: #2196F3;">Deep dive into new topic, make concise notes.</td></tr>
+                <tr data-start-time="12:00" data-end-time="13:00"><td style="background-color: #BDBDBD;">12:00 PM - 01:00 PM</td><td style="background-color: #BDBDBD;">Lunch Break</td><td style="background-color: #BDBDBD;">Relaxation</td><td style="background-color: #BDBDBD;">Step away from screens, eat mindfully.</td></tr>
+                <tr data-start-time="13:00" data-end-time="16:00"><td style="background-color: #4CAF50;">01:00 PM - 04:00 PM</td><td style="background-color: #4CAF50;">Problem Solving</td><td style="background-color: #4CAF50;">PYQs & Practice</td><td style="background-color: #4CAF50;">Solve questions related to the day's topic.</td></tr>
+                <tr data-start-time="16:00" data-end-time="17:00"><td style="background-color: #FF9800;">04:00 PM - 05:00 PM</td><td style="background-color: #FF9800;">Aptitude & Maths</td><td style="background-color: #FF9800;">GATE Aptitude</td><td style="background-color: #FF9800;">Consistent practice is key for this scoring section.</td></tr>
+                <tr data-start-time="17:00" data-end-time="18:00"><td style="background-color: #9C27B0;">05:00 PM - 06:00 PM</td><td style="background-color: #9C27B0;">College Work / DEV Projects</td><td style="background-color: #9C27B0;">Academics / DEV</td><td style="background-color: #9C27B0;">Attend lectures, basic assignments, or work on a small project.</td></tr>
+                <tr data-start-time="18:00" data-end-time="19:00"><td style="background-color: #BDBDBD;">06:00 PM - 07:00 PM</td><td style="background-color: #BDBDBD;">Personal Time / Exercise / Hobbies</td><td style="background-color: #BDBDBD;">Wellness</td><td style="background-color: #BDBDBD;">Essential for de-stressing and preventing burnout.</td></tr>
+                <tr data-start-time="19:00" data-end-time="20:00"><td style="background-color: #BDBDBD;">07:00 PM - 08:00 PM</td><td style="background-color: #BDBDBD;">Dinner & Family Time</td><td style="background-color: #BDBDBD;">Relaxation</td><td style="background-color: #BDBDBD;">Recharge and connect.</td></tr>
+                <tr data-start-time="20:00" data-end-time="22:30"><td style="background-color: #00BCD4;">08:00 PM - 10:30 PM</td><td style="background-color: #00BCD4;">Flexible Slot</td><td style="background-color: #00BCD4;">Deep Study/Revision/PYQs</td><td style="background-color: #00BCD4;">Focus on weak topics or continue with the day's study.</td></tr>
+                <tr data-start-time="22:30" data-end-time="23:00"><td style="background-color: #BDBDBD;">10:30 PM - 11:00 PM</td><td style="background-color: #BDBDBD;">Plan for Tomorrow & Wind Down</td><td style="background-color: #BDBDBD;">Planning/Personal Care</td><td style="background-color: #BDBDBD;">Organize thoughts, prepare for the next day.</td></tr>
+                <tr data-start-time="23:00" data-end-time="24:00"><td style="background-color: #BDBDBD;">11:00 PM onwards</td><td style="background-color: #BDBDBD;">Sleep</td><td style="background-color: #BDBDBD;">Rest & Recovery</td><td style="background-color: #BDBDBD;">Crucial for memory consolidation (7-8 hours).</td></tr>
             </tbody>
         </table>
-    </div>
-
-    <!-- Suggested Projects Section -->
-    <h2 class="phase-header rounded-xl shadow-md mt-8">Suggested Projects for Development</h2>
-    <h3 class="text-xl font-semibold text-center mb-4">Build these projects to enhance your skills and resume.</h3>
-    <div class="notes rounded-xl shadow-md">
-        <p class="mb-2">Focus on understanding the underlying concepts, clean code, and version control (Git).</p>
-        <ul class="list-disc pl-5">
-            <li><strong>Beginner Projects (Phase 1-2):</strong></li>
-            <ul class="list-circle pl-5 ml-4">
-                <li><strong>CLI Calculator:</strong> Basic arithmetic operations, command-line interface.</li>
-                <li><strong>To-Do List App:</strong> (Web/Mobile) - Basic CRUD (Create, Read, Update, Delete) functionality. Start with local storage, then move to a simple database (e.g., Firebase, SQLite).</li>
-                <li><strong>Simple Quiz App:</strong> Multiple-choice questions, score tracking.</li>
-                <li><strong>Unit Converter:</strong> Convert between different units (e.g., temperature, length).</li>
-            </ul>
-            <li><strong>Intermediate Projects (Phase 2-3):</strong></li>
-            <ul class="list-circle pl-5 ml-4">
-                <li><strong>Blog Platform:</strong> (Web) - User authentication, post creation/editing, comments. Use a framework (e.g., React/Vue/Angular with Node.js/Django/Flask).</li>
-                <li><strong>E-commerce Product Listing Page:</strong> (Web/Mobile) - Display products, filter, sort, add to cart (frontend only). Focus on responsive design.</li>
-                <li><strong>Chat Application:</strong> (Web/Mobile) - Real-time messaging using WebSockets (e.g., Socket.IO).</li>
-                <li><strong>Weather App:</strong> Integrate with a public weather API to display current and forecast weather.</li>
-                <li><strong>Simple Game:</strong> (e.g., Tic-Tac-Toe, Snake, Sudoku) - Focus on game logic and UI.</li>
-            </ul>
-            <li><strong>Advanced Projects (Phase 3-4):</strong></li>
-            <ul class="list-circle pl-5 ml-4">
-                <li><strong>Personal Portfolio Website:</strong> Showcase your projects, skills, and resume. Focus on design, responsiveness, and SEO.</li>
-                <li><strong>Job Board/Internship Portal:</strong> (Web) - Users can post/search jobs, apply. Involves complex database design, search functionality, user roles.</li>
-                <li><strong>Machine Learning Model Deployment:</strong> Build a simple ML model (e.g., sentiment analysis) and deploy it as a web API using Flask/Django.</li>
-                <li><strong>Custom API with Authentication:</strong> Build a RESTful API for a specific domain (e.g., book management, task tracking) with proper authentication (JWT) and database integration.</li>
-                <li><strong>Contribution to Open Source:</strong> Find a small feature or bug fix in an open-source project. This demonstrates collaboration and real-world coding.</li>
-            </ul>
-        </ul>
     </div>
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            const today = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('current-date').textContent = today.toLocaleDateString('en-US', options);
+
             function updateDailyTimetableHighlight() {
                 const allDailyRows = document.querySelectorAll('#daily-timetable tbody tr');
                 allDailyRows.forEach(row => {
@@ -412,13 +322,12 @@
                         const currentHour = now.getHours();
                         const currentMinute = now.getMinutes();
                         const currentTimeInMinutes = currentHour * 60 + currentMinute;
-
+                        
                         const [startHour, startMinute] = startTimeStr.split(':').map(Number);
                         const [endHour, endMinute] = endTimeStr.split(':').map(Number);
                         const startTimeInMinutes = startHour * 60 + startMinute;
                         const endTimeInMinutes = endHour * 60 + endMinute;
 
-                        // Check if the current time falls within the time slot
                         if (currentTimeInMinutes >= startTimeInMinutes && currentTimeInMinutes < endTimeInMinutes) {
                             row.classList.add('current-task-highlight');
                             row.classList.add('rounded-lg');
@@ -429,20 +338,9 @@
                     }
                 });
             }
-
-            // Initial highlight on page load
             updateDailyTimetableHighlight();
-
-            // Set up a live update that checks every minute (60,000 milliseconds)
             setInterval(updateDailyTimetableHighlight, 60000);
-
-            // Hide the update progress button and status
-            const updateProgressBtn = document.getElementById('updateProgressBtn');
-            const statusDiv = document.getElementById('progress-status');
-            if (updateProgressBtn) updateProgressBtn.style.display = 'none';
-            if (statusDiv) statusDiv.style.display = 'none';
         });
     </script>
-
 </body>
 </html>
