@@ -10,108 +10,109 @@
         /* Custom styles for better readability and aesthetics */
         body {
             font-family: "Inter", sans-serif;
-            background-color: #f8f9fa;
-            color: #343a40;
-            padding: 20px;
+            background-color: #eef2f8; /* A light, clean background */
+            color: #2d3748; /* Darker text for contrast */
+            padding: 24px;
         }
         h1, h2, h3 {
-            color: #1a202c;
-            margin-bottom: 1rem;
+            color: #1f2937;
+            margin-bottom: 12px;
         }
-        /* Styling for tables */
+        /* Styling for main timetable tables */
         table {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
-            margin-bottom: 2rem;
+            margin-bottom: 32px;
             background-color: #ffffff;
-            border-radius: 0.75rem;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5e7eb; /* Subtle border for the whole table */
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); /* Subtle shadow added here */
         }
         th, td {
-            border: 1px solid #e2e8f0;
-            padding: 1rem;
+            border: 1px solid #e5e7eb; /* Light border for cells */
+            padding: 16px;
             text-align: left;
             vertical-align: top;
+            transition: background-color 0.3s ease;
         }
         th {
-            background-color: #edf2f7;
+            background-color: #f3f4f6; /* Light grey for header */
             font-weight: 600;
-            color: #2d3748;
+            color: #4b5563;
             position: sticky;
             top: 0;
             z-index: 10;
         }
+        tr:hover {
+            background-color: #f7f8fa; /* Hover effect for rows */
+        }
         /* Specific rounded corners for table header cells */
-        th:first-child { border-top-left-radius: 0.75rem; }
-        th:last-child { border-top-right-radius: 0.75rem; }
+        th:first-child { border-top-left-radius: 12px; }
+        th:last-child { border-top-right-radius: 12px; }
         /* Specific rounded corners for table body cells (bottom) */
-        tr:last-child td:first-child { border-bottom-left-radius: 0.75rem; }
-        tr:last-child td:last-child { border-bottom-right-radius: 0.75rem; }
+        tr:last-child td:first-child { border-bottom-left-radius: 12px; }
+        tr:last-child td:last-child { border-bottom-right-radius: 12px; }
 
         tr:nth-child(even) {
-            background-color: #f7fafc;
+            background-color: #fcfdfe;
         }
         .category-table {
             width: auto;
-            margin-bottom: 1.5rem;
+            margin-bottom: 24px;
             box-shadow: none;
-            border-radius: 0.5rem;
+            border-radius: 8px;
         }
         .category-table th, .category-table td {
-            padding: 0.75rem 1rem;
+            padding: 12px 16px;
         }
         .phase-header {
-            background-color: #d1e7dd;
+            background-color: #dbeafe; /* A soft blue for phase headers */
             font-weight: bold;
             text-align: center;
-            padding: 1.5rem;
+            padding: 24px;
             font-size: 1.5em;
-            border-bottom: 2px solid #8ac8b7;
-            border-radius: 0.75rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-bottom: 2px solid #93c5fd;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Shadow added here */
         }
         .notes, .key-info {
-            background-color: #fffbeb;
-            border-left: 5px solid #fbd38d;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-radius: 0.75rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            background-color: #fef3c7; /* A soft yellow for info boxes */
+            border-left: 5px solid #fcd34d;
+            padding: 24px;
+            margin-bottom: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Shadow added here */
         }
         .key-info ul {
             list-style-type: disc;
-            padding-left: 20px;
+            padding-left: 24px;
         }
         .key-info li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 4px;
         }
         strong {
-            color: #0056b3;
+            color: #1d4ed8;
         }
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            body { padding: 10px; }
+            body { padding: 16px; }
             table, .category-table { display: block; overflow-x: auto; white-space: nowrap; }
-            th, td { min-width: 120px; }
-            .phase-header { font-size: 1.2em; padding: 1rem; }
-            .notes, .key-info { padding: 1rem; }
+            th, td { min-width: 120px; padding: 12px; }
+            .phase-header { font-size: 1.2em; padding: 16px; }
+            .notes, .key-info { padding: 16px; }
         }
         /* Live schedule styles */
-        .live-day-highlight {
-            background-color: #e6f7ff;
-            border: 2px solid #1890ff;
-        }
         .current-task-highlight {
-            background-color: #d4eaf7 !important;
+            background-color: #bfdbfe !important;
             font-weight: bold;
-            border: 2px solid #1890ff !important;
+            border: 2px solid #2563eb !important;
         }
     </style>
 </head>
-<body class="p-4">
+<body class="p-6">
 
     <!-- Main Title -->
     <h1 class="text-4xl font-bold text-center mb-8">Comprehensive Dual-Focus Timetable</h1>
@@ -147,7 +148,7 @@
         </ul>
     </div>
 
-    <div class="overflow-x-auto rounded-xl shadow-lg">
+    <div class="overflow-x-auto rounded-xl">
         <table id="phase1-table">
             <thead>
                 <tr>
@@ -190,7 +191,7 @@
         </ul>
     </div>
 
-    <div class="overflow-x-auto rounded-xl shadow-lg">
+    <div class="overflow-x-auto rounded-xl">
         <table id="phase2-table">
             <thead>
                 <tr>
@@ -223,7 +224,7 @@
         </ul>
     </div>
 
-    <div class="overflow-x-auto rounded-xl shadow-lg">
+    <div class="overflow-x-auto rounded-xl">
         <table id="phase3-table">
             <thead>
                 <tr>
@@ -279,7 +280,7 @@
         <p class="mb-2">This is a general guideline for a typical study day. Flexibility is key!</p>
     </div>
 
-    <div class="overflow-x-auto rounded-xl shadow-lg">
+    <div class="overflow-x-auto rounded-xl">
         <table id="daily-timetable">
             <thead>
                 <tr>
